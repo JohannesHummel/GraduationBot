@@ -1,0 +1,80 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: latex italic
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_italic
+  - action: italic_form
+  - slot_was_set:
+    - italic: some text
+  - active_loop: italic_form
+  - active_loop: null
+  - action: utter_italic
+
+- story: latex bold
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_bold
+  - action: bold_form
+  - slot_was_set:
+    - bold: some text
+  - active_loop: bold_form
+  - active_loop: null
+  - action: utter_bold
+
+- story: latex list
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_list
+  - action: list_form
+  - slot_was_set:
+    - category_list: bullets
+  - slot_was_set:
+    - list: this topic, software engineering
+  - active_loop: list_form
+  - active_loop: null
+  - action: action_utter_list
+
+- story: paper search
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_paper
+  - action: paper_form
+  - slot_was_set:
+    - paper: some topic
+  - active_loop: paper_form
+  - active_loop: null
+  - action: action_utter_paper

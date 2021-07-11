@@ -1,0 +1,169 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: request_italic
+  examples: |
+    - how can I write text italic?
+    - what is the command in latex for writing in italic?
+    - text in italic
+    - words in italic
+    - what's the command for italic?
+    - italic text
+
+- intent: request_bold
+  examples: |
+    - how can I write text in bold?
+    - what is the command in latex for writing in bold?
+    - text in bold
+    - words in bold
+    - what's the command for bold?
+    - bold text
+
+- intent: request_list
+  examples: |
+    - how can I create a list in latex?
+    - what is the command in latex for creating a list?
+    - list in latex
+    - description in latex
+    - what's the command for a list?
+    - list
+
+- intent: request_paper
+  examples: |
+    - can you help me find a paper?
+    - can you help me find a journal?
+    - can you help me find references?
+    - paper
+    - help find paper
+    - paper search
+    - can you do a paper search for me?
+    - can you help me by doing a paper search?
+
+- intent: inform_list
+  examples: |
+    - I want these headlines Some headline, next topic
+    - These topics should be the headlines This is some headline, this a second headline, this is a third headline
+    - These generic headline
+
+- intent: latex
+  examples: |
+    - What is Latex?
+    - What is Latex about?
+    - How can I use latex?
+    - Introduction to Latex
+    - Can you help me with latex?
+    - help Latex
+
+- intent: seminar
+  examples: |
+    - Where can I find Information regardings seminars?
+    - What is a Seminar?
+    - What do I have to do to participate in a seminar?
+    - How can I find a topic for my seminar?
+    - How many seminars are there?
+    - Seminar help
+    - help seminar
+    - can you help me find a seminar topic?
+    - can you help me with seminar?
+
+- intent: thesis
+  examples: |
+    - Where can I find Information regarding a thesis?
+    - What is a Thesis?
+    - What do I have to do to start with my thesis?
+    - How can I find a topic for my Thesis?
+    - How many Professors are there, that can mentor me?
+    - thesis help
+    - help Thesis
+    - can you help me finding a professor for my thesis?
+    - can you help me with thesis?

@@ -1,0 +1,169 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - request_italic
+  - request_bold
+  - request_list
+  - request_paper
+  - inform_list
+  - seminar
+  - thesis
+  - latex
+
+entities:
+  - list
+
+slots:
+  italic:
+    type: text
+    influence_conversation: false
+  bold:
+    type: text
+    influence_conversation: false
+  list:
+    type: text
+    influence_conversation: true
+  category_list:
+    type: categorical
+    values:
+    - numbers
+    - bullets
+    - simple headlines
+    influence_conversation: true
+  paper:
+    type: text
+    influence_conversation: false
+
+forms:
+  italic_form:
+    required_slots:
+        italic:
+          - type: from_text
+  bold_form:
+    required_slots:
+        bold:
+          - type: from_text
+  list_form:
+    required_slots:
+        category_list:
+          - type: from_text
+        list:
+          - type: from_text
+  paper_form:
+    required_slots:
+        paper:
+          - type: from_text
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_italic_form_italic:
+  - text: "what do you want to write italic?"
+
+  utter_ask_bold_form_bold:
+  - text: "what do you want to write in bold?"
+ 
+  utter_ask_category_list:
+  - text: |+
+      which list do you want to create?
+      You can choose between a list with:
+       - bullets
+       - numbers
+       - normal headlines 
+
+  utter_ask_list:
+  - text: |+
+      which topics do you want as headlines in your list?
+            
+     
+      Please provide them in following format:
+      > headline1,headline2,headline3 
+
+  utter_ask_paper:
+  - text: |+
+      About which topic do you want more information?
+            
+     
+      Please provide it in the following format:
+      > ecology 
+ 
+  utter_italic:
+  - text: |
+      You can write your text in italic with the following command:
+      > \\textit{{{italic}}}
+
+  utter_bold:
+  - text: |
+      You can write your text in bold with the following command:
+      > \\textbf{{{bold}}}
+
+  utter_latex:
+  - text: |+
+      The idea of Latex is, that you don't have to worry much about the appearance of your work,
+      but you can focus more on the important thing, the actual writing.
+      Latex uses commands to format text into tables, lists or just changes the appearance of the sentences. 
+      
+
+
+      Here is an example:
+      > \\documentclass{{article}}
+      > \\title{{Conversational User Interfaces in Education}}
+      > \\author{{John Doe}}
+      > \\date{{June 2021}}
+      > \\begin{{document}}
+      >   \\maketitle
+      >   Hello world!
+      > \\end{{document}}
+
+  utter_seminar:
+  - text: |+
+      You can find informations regarding the seminars on the website of Hochschule Karlsruhe, under the following link:          
+      https://www.iwi.hs-karlsruhe.de/iwii/info/workflow/INFB/seminar/0
+
+  utter_thesis:
+  - text: >+
+      You can find a pdf with the instructions for starting with your thesis under the following link:
+      https://www.iwi.hs-karlsruhe.de/iwii/info/workflow/INFB/thesis/0 
+            
+     
+      If you need to find a professor then you could have a look at the list of all professors.
+      They provide their mail adress and telephone number to contact them:
+      https://www.iwi.hs-karlsruhe.de/iwii/info/consultationhours
+  
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+
+actions:
+  - action_utter_list 
+  - action_utter_paper
+  - validate_list_form
+  - validate_paper_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
