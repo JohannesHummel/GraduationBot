@@ -32,10 +32,10 @@ def create_welcome_embed():
 
     #embed.set_thumbnail(url="https://i.imgur.com/axLm3p6.jpeg")
 
-    embed.add_field(name="Paper Search", value="Search for Papers of certain Topics.\n Use the following format: \n \n > I want to search a paper \n", inline=False) 
-    embed.add_field(name="Latex", value="Ask questions about the writing of your paper or thesis in latex.\n Use the following format: \n \n > How can I create a list in latex?\n \n or \n \n > Can you help me find a professor? \n", inline=False)
-    #embed.add_field(name="Field 3 Title", value="It is inline with Field 2", inline=True)
-
+    embed.add_field(name="Paper Search", value="Search for Papers of certain Topics.\n Use the following format: \n > I want to search a paper \n", inline=False) 
+    embed.add_field(name="Latex", value="Ask questions about the writing of your paper or thesis in latex.\n Use the following format: \n > How can I create a list in latex?\n", inline=False)
+    embed.add_field(name="Other", value="Get information regarding seminars, how to find a topic for a thesis or get help finding a professor.\n Use the following format: \n > Can you help me find a professor? \n \n", inline=False)
+    
     embed.set_footer(text="You have any further questions? Then you can get a list of all available functions with: \n What are your functions?")
 
     return embed
