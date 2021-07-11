@@ -91,6 +91,12 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: request_functions
+  examples: |
+    - What are your functions?
+    - functions
+    - How can you help me?
+
 - intent: request_italic
   examples: |
     - how can I write text italic?
@@ -146,7 +152,7 @@ nlu:
 
 - intent: seminar
   examples: |
-    - Where can I find Information regardings seminars?
+    - Where can I find Information regarding seminars?
     - What is a Seminar?
     - What do I have to do to participate in a seminar?
     - How can I find a topic for my seminar?

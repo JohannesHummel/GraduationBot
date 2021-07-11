@@ -31,3 +31,8 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_please_rephrase
+
+- rule: Ask about the functionality of the bot
+  steps:
+  - intent: request_functions
+  - action: utter_functions

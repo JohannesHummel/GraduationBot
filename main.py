@@ -32,11 +32,11 @@ def create_welcome_embed():
 
     #embed.set_thumbnail(url="https://i.imgur.com/axLm3p6.jpeg")
 
-    embed.add_field(name="Paper Search", value="Search for Papers of certain Authors, Topics or Universities.", inline=False) 
-    embed.add_field(name="Latex", value="Ask questions about the writing of your paper or thesis in latex.", inline=False)
+    embed.add_field(name="Paper Search", value="Search for Papers of certain Topics.\n Use the following format: \n \n > I want to search a paper \n", inline=False) 
+    embed.add_field(name="Latex", value="Ask questions about the writing of your paper or thesis in latex.\n Use the following format: \n \n > How can I create a list in latex?\n \n or \n \n > Can you help me find a professor? \n", inline=False)
     #embed.add_field(name="Field 3 Title", value="It is inline with Field 2", inline=True)
 
-    embed.set_footer(text="You have any further questions? Then ask specific questions about a certain subject and hopefully get some answers, that support you in your work :)")
+    embed.set_footer(text="You have any further questions? Then you can get a list of all available functions with: \n What are your functions?")
 
     return embed
 load_dotenv('.env')

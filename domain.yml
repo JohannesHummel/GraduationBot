@@ -12,6 +12,7 @@ intents:
   - request_bold
   - request_list
   - request_paper
+  - request_functions
   - inform_list
   - seminar
   - thesis
@@ -156,6 +157,27 @@ responses:
   
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_functions:
+  - text: >+
+      You can ask me the following questions:
+
+
+      > What are your functions?
+
+      > How can I write text in italic?
+
+      > How can I write text in bold?
+
+      > How can I create a list in latex?
+
+      > Can you help me find a paper?
+
+      > What is Latex?
+
+      > How can I find a topic for my seminar?
+
+      > Where can I find Information regarding a thesis?
 
 
 actions:
