@@ -15,7 +15,6 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    #await message.channel.send(embed=create_welcome_embed())
     answer = send_data(message)
     
     await message.reply(answer)
@@ -26,12 +25,6 @@ async def on_message(message):
 def create_welcome_embed():
     #### Create the initial embed object ####
     embed=discord.Embed(title="Graduation Bot", url="https://realdrewdata.medium.com/", description=" I'm a Bot that can help you writing your thesis, paper or essay. My functions are:", color=0x109319)
-
-    # Add author, thumbnail, fields, and footer to the embed
-    #embed.set_author(name="RealDrewData", url="https://twitter.com/RealDrewData", icon_url="https://pbs.twimg.com/profile_images/1327036716226646017/ZuaMDdtm_400x400.jpg")
-
-    #embed.set_thumbnail(url="https://i.imgur.com/axLm3p6.jpeg")
-
     embed.add_field(name="Paper Search", value="Search for Papers of certain Topics.\n Use the following format: \n > I want to search a paper \n", inline=False) 
     embed.add_field(name="Latex", value="Ask questions about the writing of your paper or thesis in latex.\n Use the following format: \n > How can I create a list in latex?\n", inline=False)
     embed.add_field(name="Other", value="Get information regarding seminars, how to find a topic for a thesis or get help finding a professor.\n Use the following format: \n > Can you help me find a professor? \n \n", inline=False)
